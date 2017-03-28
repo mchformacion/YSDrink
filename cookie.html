@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cookie</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	document.cookie="nombrecookie=valorcookie; max-age=3600; path=/"; 
+
+	document.cookie="color_favorito=amarillo";
+
+	var fecha = new Date(); 
+	alert("Fecha1:"+fecha);
+	fecha.setTime(fecha.getTime()+365*24*60*60*1000);
+	alert("Fecha2:"+fecha);
+
+	//Creo la cookie uno
+	document.cookie ="micookie=Fecha;expires="+fecha.toUTCString()+";path=/";
+	//Creo la cookie dos
+	document.cookie ="micookie=ana";	
+	//Modifico la cookie uno
+	document.cookie ="micookie=pepe;path=/";
+	//Modifico la cookie dos
+	document.cookie ="micookie=juan";
+
+
+	</script>
+</body>
+</html>
